@@ -1,0 +1,85 @@
+# _config.yml: Jekyll settings for GitHub Pages
+# Theme: original "Voxel Docs" inspired by Minestom (dark, blocky, dev-first).
+# IMPORTANT: All artwork/CSS in this repo is original. No Minecraft/Mojang assets.
+
+title: "Minecraft Backend Handbook"
+tagline: "Client-side effects via server packets"
+description: >-
+  Backend techniques that make the vanilla client see, feel, or believe things
+  the server API does not expose. Built in Minestom, fact-checked, with
+  minimal reproducible code.
+url: "https://minestom-united.github.io"
+baseurl: "/tips-tricks-breaks" # update if served from org root or custom domain
+author: "Minestom United"
+lang: "en"
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+# Only plugins whitelisted by GitHub Pages (https://pages.github.com/versions/)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Permalinks keep .html off URLs for clean docs links
+permalink: pretty
+
+# Defaults: every markdown page gets the voxel layout unless overridden
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+
+# Theme navigation: edit labels/urls as pages are added.
+# External links get target="_blank" automatically in the layout.
+nav:
+  - label: "Home"
+    url: "/"
+  - label: "Techniques"
+    url: "/techniques/"
+  - label: "Contribute"
+    url: "/contribute/"
+  - label: "GitHub"
+    url: "https://github.com/minestom-united/tips-tricks-breaks"
+
+# Footer links
+footer:
+  show_github_link: true
+  note: "Original theme. Not affiliated with Mojang or Microsoft. Minestom is MIT-licensed (Minestom/Minestom)."
+
+# Exclude from build (docs/ holds the design spec: not site content)
+exclude:
+  - docs/
+  - skills/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - node_modules/
+  - "*.gemspec"
+
+# Keep future-dated posts from breaking the build
+future: false
+
+# Pagination-less docs site
+show_excerpts: false

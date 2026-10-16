@@ -1,0 +1,14 @@
+# Categories for technique pages. A page's `category:` must match a `slug` here.
+# Add a new entry here before using a new category.
+- slug: camera
+  label: "Camera & Movement"
+  blurb: "Move or reframe what the player sees."
+- slug: player-state
+  label: "Player State"
+  blurb: "Make the client believe something different about the player."
+- slug: server
+  label: "Server & Performance"
+  blurb: "Save memory, CPU, or bandwidth. No client-visible change."
+- slug: visuals
+  label: "Visuals & Shaders"
+  blurb: "Client-visual tricks. Nothing verified yet."
